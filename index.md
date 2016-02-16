@@ -1,73 +1,102 @@
-Tutorial NodeJS, Express, Atom, GitHub, Cloud9 y Markdown
-======================================================
+# Configuración del entorno de desarrollo para la asinatura Procesadores del Lenguaje
 
-## Instalación de NodeJS en Windows
+## Contenido
+1. Node JS
+2. Express
+2. Atom
+3. GitHub
+4. Cloud9
+5. Markdown
 
-Es un intérprete **Javascript** del lado del servidor que cambia la noción de cómo debería trabajar un servidor. Su meta es permitir a un programador construir aplicaciones altamente escalables y escribir código que maneje decenas de miles de conexiones simultáneas en una sólo una máquina física.
+## Instalación de NodeJS en Ubuntu:
 
-Para empezar a utilizarlo descargar el paquete de instalación para la plataforma windows y seguir los pasos del asistente de instalación de **NodeJS**.
+NodeJS es un entorno en tiempo de ejecución con arquitectura orientada a eventos que actúa del lado del servidor. Es de código abierto y está basado en el motor V8 de Google.
 
-![](images/node.png)
+Para la instalación de NodeJS en ubunto existen dos métodos:
+* Consola de comandos:
 
-Abrimos la consola de **NodeJS** y comprobamos que se ha instalado correctamente, aparecerá el siguiente mensaje que indica que se ha instalado.
+![](images/nodetr.png)
 
-Instalamos el framework **Express** con la consola de **NodeJS** y el siguiente comando:
+Este método es muy sencillo y rápido de realizar, pero en cambio instala una versión obsoleta de NodeJS.
+* Descarga:
 
-**Comando**
+Para la descarga de NodeJS debemos dirigirnos a la página [**https://nodejs.org**](https://nodejs.org) y descargar una de las versiones existentes.
 
-> `npm install express --save`
+![](images/nodedl.png)
 
-![](images/node2.png)
+Al descomprimir el paquete descargado ya podemos hacer uso del node, aunque debemos dirigirnos a la carpeta /bin para poder ejecutarlo. Copiando el el archivo ejecutable Node a la carpeta **usr/bin** del sistema podemos hacer usuo del comando node desde cualquier parte del sistema.
 
-## Instalación del editor de texto Atom
+![](images/nodecp.png)
 
-Usaremos **Atom** como editor de texto para el desarrollo de nuestros proyectos, para ello descargamos el instalador en la página oficial de atom, y a continuación ejecutamos el asistente de instalación.
+Al instalar NodeJS se nos instala también el gestor de paquetes **NPM** (node package manager). Este gestor de paquetes nos permite instarlar software adicional para uso de NodeJS.
 
-![](images/atom1.png)
+## Express:
+Express es un framework para el desarrollo de aplicaciones web y móviles basado en NodeJS. Para la instalación de express debemos dirigirmos, en el terminal, a la carpeta donde queremos descargar los archivos necesarios y desde ejecutar el siguiente comando:
 
-Dado que vamos a utilizar el formato **Markdown** es bueno saber que en **Atom** podremos obtener una preview del contenido de nuestro fichero Markdown ya que incorpora el formato **GitHub Markdown** con el comando:
+ > `npm install express`
 
-**Comando**
+![](images/express.png)
 
-> * Markdown preview `ctrl+shift+m`
-> * Markdown export to HTML `Save As HTML`
+## Atom:
 
+Atom es un editor de textos que soporta diversos lenguajes de programación, este editor es libre y de código abierto. Mediante la adición de plugins se puede adaptar el sistema a cualquier uso, permitiendo ampliar las características del mismo en función de nuestras necesidades.
 
+Para la instalación **Atom** debemos descargar la versión que se adapte a nuestro sistema operativo de la página web de Atom [https://atom.io](https://atom.io).
 
-## Instalación de GitHub Desktop
+![](images/atomdl.png)
 
-GitHub es una plataforma para alojar proyectos utilizando el sistema de control de versiones **Git**. Para instalarlo accedemos a la página oficial de **GitHub** y descargamos el instalador que ejecutaremos posteriormente para iniciar el asistente de instalación.
+Una vez descargado el paquete lo ejecutamos y se instala con el centro de software de Ubuntu.
 
-![](images/git.png)
+![](images/atominstall.png)
 
-Una vez instalado configuramos nuestra cuenta de **GitHub** en la aplicación para poder sincronizar nuestro repositorio tanto local como remoto, en caso de no tener cuenta crearemos una en la página de **GitHub**.
+## GitHub
+
+GitHub es una plataforma web que da soporte al desarrollo de software ofreciendo un sistema de repositorios online. Github hace uso del sistema de control de versiones **Git**. En Ubuntu se puede utilisar desde el terminal con los comandos del sistema Git.
+Para Windows y MacOS existe un cliente gráfico que permite hacer uso de los servicios de GitHub.
+
+![](images/gitds.png)
 
 ## Cloud 9
 
-Es un IDE de desarrollo online, para su uso será necesario crear una cuenta en la página oficial o acceder con las credenciales de GitHub si ya se dispone de una cuenta. Una vez registrados podremos crear proyectos de varias tecnologías como puede ser NodeJS, HTML5, C++, Ruby On Rails, etc.
+Cloud 9 es un entorno de desarrollo online, el cual ofrece los mismos servicios que ofrece un terminal Unix, así como un editor de texto y código online.
 
-![](images/cloud.png)
+Para acceder a los servicios de Cloud 9 es necesario registrarse o acceder con los credenciales de GitHub.
 
-Si disponemos de algún proyecto en un repositorio de GitHub podremos asociarlo a **Cloud9** para trabajar en él tan solo creando un “`nuevo workspace`” y añadiendo la url *git* del correspondiente repositorio.
+Una vez registrados el sistema nos permite crear espacios de trabajo previamente configurados, o crear uno que se ajuste a nuestras necesidades.
 
-![](images/cloud2.png)
 
-Además **Cloud9** permite el trabajo en equipo en el IDE añadiendo miembros a tu workspace.
+![](images/c9_1.png)
+
+Las tecnologías de desarrollo soportadas por Cloud 9, entre otras: NodeJS, HTML5, C++, Ruby On Rails, etc.
+
+Para trabajar desde Cloud 9 con repositorios alojados en GitHub, solo es necesario crear un nuevo espacio de trabajo añadiendo la url del repositorio en GitHub.
+
+![](images/c9_2.png)
+![](images/c9_3.png)
 
 ## Markdown
 
-Markdown es un lenguaje de marcado ligero, lo vamos a utilizar en el editor de texto Atom ya que incorpora por defecto este formato y podremos obtener un live preview mientras vamos desarrollando además de poder exportarlo a HTML sin la necesidad de usar un conversor adicional.
+Markdown es un lenguaje de marcado ligero el cual permite ser exportado a diversos formatos (html, pdf, mobi, etc). Desde el editor Atom es posible ver en tiempo real el resultado del texto que se está creando.
 
-Sintaxis:
+![](images/md.png)
 
+La sintaxis es simple, se emplea una serie de caracteres reservados para indicar que es cada elemento en el téxto. A continuación se indica los elementos más usados del lenguaje.
 
-Encabezados
+### Títulos
 ```
-# Encabezado H1
-## Encabezado H2
-### Encabezado H3
+# Título 1
+## Título 2
+### Título 3
+Párrafo
 ```
-Tipografía
+Resultado
+
+* # Título 1
+* ## Título 2
+* ### Título 3
+* Párrafo
+
+### Tipografía
 ```
 **Negrita**
 *Cursiva*
@@ -75,21 +104,55 @@ Tipografía
 Parrafo separar por lineas en blanco
 `Codigo`
 ```
-Recursos
+Resultado
+
+**Negrita**
+
+*Cursiva*
+
+> Citas
+
+Parrafo separar por lineas en blanco
+
+`Codigo`
+
+### Links
 ```
 ![Texto imagen](url-imagen)
 * [Links](https://example.com)
 ```
-Listas
+Resultado
+
+* ![Esto es una imágen](http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-8/128/Accept-icon.png)
+
+* [Links](https://example.com)
+
+### Listas
+
 ```
+Lista ordenda
 1. Lista 1
 2. Lista 2
 
+Lista no ordenada
 * Lista 1
 * Lista 2
 ```
+| Resultado
 
-**Recursos:**
+Lista ordenda
+1. Lista 1
+2. Lista 2
+
+Lista no ordenada
+* Lista 1
+* Lista 2
+
+
+> * Markdown preview `ctrl+shift+m`
+> * Markdown export to HTML `Save As HTML`
+
+## Recursos
 
 * [NodeJS](https://nodejs.org)
 * [Express](http://expressjs.com)
@@ -98,3 +161,5 @@ Listas
 * [GitHub Pages](https://pages.github.com/)
 * [Cloud 9 IDE](https://c9.io)
 * [Markdown](http://daringfireball.net/projects/markdown/)
+* [Tutorial de Markdown Español](http://joedicastro.com/pages/markdown.html)
+* [Resultado del Markdown HTML](http://alu0100309553.github.io/tareas-iniciales-alu0100309553/)
